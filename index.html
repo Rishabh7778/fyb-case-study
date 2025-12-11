@@ -16,6 +16,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Quicksand:wght@300..700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
         /* Custom Properties & Overrides */
@@ -29,7 +32,6 @@
         body {
             font-family: "DM Sans", sans-serif;
             color: var(--brand-black);
-            background-color: var(--brand-offwhite);
             -webkit-font-smoothing: antialiased;
         }
 
@@ -253,6 +255,12 @@
             font-weight: 700;
         }
 
+        #overview {
+            margin-top: -64px;
+            position: relative;
+            z-index: 10;
+        }
+
         /* Footer */
         footer {
             background-color: var(--brand-black);
@@ -281,6 +289,38 @@
         .text-balance {
             text-wrap: balance;
         }
+
+
+        @media (max-width: 625px) {
+            #overview {
+                margin-top: -15px;
+            }
+        }
+
+        .bullet-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .visit-website {
+            color: var(--Color-Black, #111013);
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 105%;
+            text-decoration: none;
+        }
+
+        .visit-website::after {
+            content: '';
+            position: absolute;
+            left: 0px;
+            right: 0;
+            bottom: 15px;
+            height: 3px;
+            background-color: #1a1a1a;
+        }
     </style>
 </head>
 
@@ -308,8 +348,8 @@
     </nav> -->
 
     <!-- Hero Section -->
-    <header class="hero-section pt-md-5 pt-2 pb-3">
-        <div class="container-xxl pb-5">
+    <header class="hero-section pt-md-5 pt-2 ">
+        <div class="container-xxl pb-0 pb-md-4">
             <span class="hero-tag">E-Commerce / UX Optimization</span>
             <h1 class="display-huge mb-4 text-white">Fuel Your Body</h1>
             <p class="lead text-white mb-5 col-lg-7">
@@ -344,7 +384,7 @@
         </div>
     </header>
 
-    <section class="py-md-5 py-sm-4">
+    <section class="py-md-5 py-4">
         <div class="container content-section">
             <div class="row">
                 <div class="col-lg-5">
@@ -409,7 +449,7 @@
     </div>
 
     <!-- Stats Overview -->
-    <section id="overview" class="section-padding pt-0" style="margin-top: -4rem; position: relative; z-index: 10;">
+    <section id="overview" class="section-padding py-0">
         <div class="container-xxl">
             <div class="row g-4">
                 <div class="col-md-4">
@@ -451,7 +491,7 @@
 
 
     <!-- Context -->
-    <section class="section-padding bg-white">
+    <section class="section-padding pb-0">
         <div class="container-xxl">
             <div class="row">
                 <div class="col-lg-4 mb-4 mb-lg-0">
@@ -472,7 +512,7 @@
         </div>
     </section>
 
-    <section class="section-padding">
+    <section class="section-padding container-xxl pb-0">
         <div class="row">
             <div class="col-12">
                 <img src="./assets/fyb-influencer.webp" class="img-fluid h-100 w-100" alt="">
@@ -486,6 +526,8 @@
             <h2 class="display-6 fw-bold mb-5 border-bottom pb-4">The Roadmap</h2>
 
             <div class="timeline-step row">
+
+                <img src="./assets//Discovery & Audit.png" class="img-fluid pb-3" alt="">
                 <div class="col-md-3 mb-3 mb-md-0">
                     <span class="step-number">01</span>
                     <div class="small fw-bold text-secondary text-uppercase mt-2">Jan 2025</div>
@@ -504,6 +546,8 @@
             </div>
 
             <div class="timeline-step row">
+
+                <img src="./assets/Competitive Analysis & Strategy.png" class="img-fluid pb-3" alt="">
                 <div class="col-md-3 mb-3 mb-md-0">
                     <span class="step-number">02</span>
                     <div class="small fw-bold text-secondary text-uppercase mt-2">Jan Week 3</div>
@@ -523,6 +567,8 @@
             </div>
 
             <div class="timeline-step row">
+
+                <img src="./assets/Design & Development.webp" class="img-fluid pb-3" alt="">
                 <div class="col-md-3 mb-3 mb-md-0">
                     <span class="step-number">03</span>
                     <div class="small fw-bold text-secondary text-uppercase mt-2">Feb - Mar 2025</div>
@@ -542,6 +588,7 @@
             </div>
 
             <div class="timeline-step row">
+                <img src="./assets/Continuous Optimization.png" class="img-fluid pb-3" alt="">
                 <div class="col-md-3 mb-3 mb-md-0">
                     <span class="step-number">04</span>
                     <div class="small fw-bold text-secondary text-uppercase mt-2">July 2025</div>
@@ -570,6 +617,9 @@
                 <h2 class="display-5 fw-bold mb-3">Rethinking the Flow</h2>
                 <p class="text-white lead">We shifted from a transactional model to a plan-based model to reduce
                     cognitive load.</p>
+
+
+                <img src="assets//fyb-changes.png" alt="Strategy" class="img-fluid">
             </div>
 
             <div class="row g-4">
@@ -581,23 +631,53 @@
                             <i class="bi bi-x-circle fs-4 text-danger"></i>
                         </div>
                         <ul class="list-unstyled d-flex flex-column gap-3">
-                            <li class="p-3 border border-secondary rounded d-flex justify-content-between opacity-50">
-                                <span>Weekly or One Time Order?</span>
+                            <li class="p-3 border border-secondary rounded d-flex justify-content-between">
+                                <span class="text-white">No clear savings shown for larger plans</span>
                                 <i class="bi bi-arrow-right"></i>
                             </li>
-                            <li class="p-3 border border-secondary rounded d-flex justify-content-between opacity-50">
-                                <span>Select Meals (Uncapped)</span>
+                            <li class="p-3 border border-secondary rounded d-flex justify-content-between">
+                                <span class="text-white">Users couldn’t switch plans mid-selection</span>
                                 <i class="bi bi-arrow-right"></i>
                             </li>
-                            <li class="p-3 border border-secondary rounded d-flex justify-content-between opacity-50">
-                                <span>User Details & Checkout</span>
-                                <i class="bi bi-cart"></i>
+                            <li class="p-3 border border-secondary rounded d-flex justify-content-between">
+                                <span class="text-white"> Limited meal information provided </span>
+                                <i class="bi bi-arrow-right"></i>
+                            </li>
+                            <li class="p-3 border border-secondary rounded d-flex justify-content-between">
+                                <span class="text-white"> Delivery details appeared only at checkout</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </li>
+                            <li class="p-3 border border-secondary rounded d-flex justify-content-between">
+                                <span class="text-white"> Only delivery option available</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </li>
+                            <li class="p-3 border border-secondary rounded d-flex justify-content-between">
+                                <span class="text-white"> Users guessed which plan offered best value</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </li>
+                            <li class="p-3 border border-secondary rounded d-flex justify-content-between">
+                                <span class="text-white"> Nutrition tracking required extra effort.</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </li>
+                            <li class="p-3 border border-secondary rounded d-flex justify-content-between">
+                                <span class="text-white"> Checkout felt disconnected from meal selection</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </li>
+                            <li class="p-3 border border-secondary rounded d-flex justify-content-between">
+                                <span class="text-white"> Fewer personalization options for users</span>
+                                <i class="bi bi-arrow-right"></i>
+                            </li>
+                            <li class="p-3 border border-secondary rounded d-flex justify-content-between">
+                                <span class="text-white"> User engagement and clarity were lower</span>
+                                <i class="bi bi-arrow-right"></i>
                             </li>
                         </ul>
-                        <p class="mt-4 small text-secondary">
+                        <p class="mt-4 small text-white">
                             <strong class="text-white">Problem:</strong> Users hesitated at the first step. Pricing per
                             meal was unclear until the end.
                         </p>
+
+
                     </div>
                 </div>
 
@@ -613,26 +693,82 @@
                                 class="p-3 bg-white text-dark rounded shadow-sm d-flex justify-content-between align-items-center">
                                 <div>
                                     <span class="badge bg-brand-green rounded-circle me-2">1</span>
-                                    <strong>Choose Plan Size</strong>
-                                    <div class="small text-muted ms-4 mt-1">4, 6, 12, or Custom</div>
+                                    <strong>Displays savings clearly for each meal plan size</strong>
+                                    <!-- <div class="small text-muted ms-4 mt-1">4, 6, 12, or Custom</div> -->
                                 </div>
                             </li>
                             <li
                                 class="p-3 bg-white text-dark rounded shadow-sm d-flex justify-content-between align-items-center">
                                 <div>
                                     <span class="badge bg-brand-green rounded-circle me-2">2</span>
-                                    <strong>Select Meals</strong>
-                                    <div class="small text-success ms-4 mt-1 fw-bold">Dynamic Pricing Applied ($11.99 -
-                                        $12.99)</div>
+                                    <strong>Shows detailed macros for every meal</strong>
+                                    <!-- <div class="small text-success ms-4 mt-1 fw-bold">Dynamic Pricing Applied ($11.99 -
+                                        $12.99)</div> -->
                                 </div>
                             </li>
                             <li
                                 class="p-3 bg-white text-dark rounded shadow-sm d-flex justify-content-between align-items-center">
                                 <div>
                                     <span class="badge bg-brand-green rounded-circle me-2">3</span>
-                                    <strong>Checkout</strong>
+                                    <strong>Allows switching between plans anytime on meal page</strong>
                                 </div>
-                                <i class="bi bi-credit-card-fill text-brand-green"></i>
+                                <!-- <i class="bi bi-credit-card-fill text-brand-green"></i> -->
+                            </li>
+                            <li
+                                class="p-3 bg-white text-dark rounded shadow-sm d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="badge bg-brand-green rounded-circle me-2">4</span>
+                                    <strong>Shows delivery date upfront on build page</strong>
+                                </div>
+                                <!-- <i class="bi bi-credit-card-fill text-brand-green"></i> -->
+                            </li>
+                            <li
+                                class="p-3 bg-white text-dark rounded shadow-sm d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="badge bg-brand-green rounded-circle me-2">5</span>
+                                    <strong>Offers pickup or home delivery flexibility</strong>
+                                </div>
+                                <!-- <i class="bi bi-credit-card-fill text-brand-green"></i> -->
+                            </li>
+                            <li
+                                class="p-3 bg-white text-dark rounded shadow-sm d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="badge bg-brand-green rounded-circle me-2">6</span>
+                                    <strong>Clearly communicates savings and plan comparisons</strong>
+                                </div>
+                                <!-- <i class="bi bi-credit-card-fill text-brand-green"></i> -->
+                            </li>
+                            <li
+                                class="p-3 bg-white text-dark rounded shadow-sm d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="badge bg-brand-green rounded-circle me-2">7</span>
+                                    <strong>Integrated macro info supports goal-based meal choices</strong>
+                                </div>
+                                <!-- <i class="bi bi-credit-card-fill text-brand-green"></i> -->
+                            </li>
+                            <li
+                                class="p-3 bg-white text-dark rounded shadow-sm d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="badge bg-brand-green rounded-circle me-2">8</span>
+                                    <strong>Seamless transition from meal choice to payment</strong>
+                                </div>
+                                <!-- <i class="bi bi-credit-card-fill text-brand-green"></i> -->
+                            </li>
+                            <li
+                                class="p-3 bg-white text-dark rounded shadow-sm d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="badge bg-brand-green rounded-circle me-2">9</span>
+                                    <strong>Provides customizable plans and flexible options</strong>
+                                </div>
+                                <!-- <i class="bi bi-credit-card-fill text-brand-green"></i> -->
+                            </li>
+                            <li
+                                class="p-3 bg-white text-dark rounded shadow-sm d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="badge bg-brand-green rounded-circle me-2">10</span>
+                                    <strong>Boosts engagement with transparent, user-friendly flow</strong>
+                                </div>
+                                <!-- <i class="bi bi-credit-card-fill text-brand-green"></i> -->
                             </li>
                         </ul>
                         <p class="mt-4 small text-light">
@@ -640,7 +776,52 @@
                             see the value per meal instantly. The 12-meal plan offers the best value ($11.99),
                             incentivizing higher AOV.
                         </p>
+
+
                     </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-5 col-12">
+                    <h3 class="text-white mt-4 display-5">The Benefits of Upgrading the Build My Meal Plan Flow</h3>
+                </div>
+                <div class="col-md-1 col-12">
+                </div>
+                <div class="col-md-6 col-12">
+                    <ul class="mt-4 list-unstyled">
+                        <li class="text-white bullet-item"><i class="fa-solid fa-check" style="color: #ffffff;"></i>
+                            Shows clear
+                            savings for larger
+                            meal plans.</li>
+                        <li class="text-white bullet-item"><i class="fa-solid fa-check" style="color: #ffffff;"></i>
+                            Displays
+                            meal macros for
+                            informed nutrition choices.</li>
+                        <li class="text-white bullet-item"><i class="fa-solid fa-check" style="color: #ffffff;"></i>
+                            Allows easy
+                            plan switching
+                            during selection.</li>
+                        <li class="text-white bullet-item"><i class="fa-solid fa-check" style="color: #ffffff;"></i>
+                            Shows
+                            delivery dates early for
+                            better planning.</li>
+                        <li class="text-white bullet-item"><i class="fa-solid fa-check" style="color: #ffffff;"></i>
+                            Offers
+                            flexible pickup or
+                            delivery options.</li>
+                        <li class="text-white bullet-item"><i class="fa-solid fa-check" style="color: #ffffff;"></i>
+                            Simplifies
+                            user decisions with
+                            transparent information.</li>
+                        <li class="text-white bullet-item"><i class="fa-solid fa-check" style="color: #ffffff;"></i>
+                            Builds
+                            trust through clear
+                            offers and savings.</li>
+                        <li class="text-white bullet-item"><i class="fa-solid fa-check" style="color: #ffffff;"></i>
+                            Enhances
+                            overall user
+                            convenience and flexibility.</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -776,11 +957,38 @@
 
 
 
-    <section class="section-padding container">
+    <section class="container section-padding">
         <div class="row">
             <div class="col-12">
                 <img src="./assets/fyb-bottom.webp" class="img-fluid h-100 w-100" alt="">
             </div>
+        </div>
+    </section>
+
+
+    <section class="bg_color-french py-md-3 py-1">
+        <div class="container content-section" bis_skin_checked="1">
+            <div class="row" bis_skin_checked="1">
+                <div class="col-lg-5" bis_skin_checked="1">
+                    <h6>Results</h6>
+                    <h3 class="content-title">
+                        Outcome
+                    </h3>
+                </div>
+                <div class="col-lg-1" bis_skin_checked="1"></div>
+                <div class="col-lg-6" bis_skin_checked="1">
+                    <div class="pb-2" bis_skin_checked="1">
+                        <p>The revamped website successfully created a premium distributor-focused experience, improving
+                            accessibility, engagement, and product visibility. Distributors can now browse products
+                            easily, place inquiries, and connect with the brand seamlessly, all while enjoying a modern
+                            and responsive design.</p>
+                        <a target="_blank"
+                            href="https://eatfyb.ca/?srsltid=AfmBOopiQjFU-1q-4MP3ZIDZgwiTk0x_Fo4z84Cd1tmfxky4iz1TKIFy"
+                            class="visit-website">Visit Website</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
