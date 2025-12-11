@@ -84,9 +84,14 @@
 
         /* Hero */
         .hero-section {
-            background-color: var(--brand-offwhite);
+            background-image: url("./assets/fyb-banner.webp");
+            background-size: cover;
+            background-position: center;
             position: relative;
             overflow: hidden;
+            height: 100vh;
+            display: flex;
+            align-items: flex-end;
         }
 
         .hero-tag {
@@ -269,7 +274,7 @@
 
         /* Utilities */
         .section-padding {
-            padding: 5rem 0;
+            padding: 80px 0;
             overflow: hidden;
         }
 
@@ -304,36 +309,36 @@
 
     <!-- Hero Section -->
     <header class="hero-section pt-md-5 pt-2 pb-3">
-        <div class="container-xxl">
+        <div class="container-xxl pb-5">
             <span class="hero-tag">E-Commerce / UX Optimization</span>
-            <h1 class="display-huge mb-4">Fuel Your Body</h1>
-            <p class="lead text-secondary mb-5 col-lg-7">
+            <h1 class="display-huge mb-4 text-white">Fuel Your Body</h1>
+            <p class="lead text-white mb-5 col-lg-7">
                 Scaling a meal subscription service in PEI, Canada from a basic checkout to a comprehensive lifestyle
                 brand, increasing average order value by $20 per customer.
             </p>
 
             <div class="row g-4 border-top pt-4">
                 <div class="col-6 col-md-3">
-                    <small class="text-uppercase text-secondary d-block mb-1 fw-bold"
+                    <small class="text-uppercase d-block mb-1 fw-bold text-white"
                         style="font-size: 0.7rem;">Client</small>
-                    <span class="fw-semibold">Jamie (FYB)</span>
+                    <span class="fw-semibold text-white">Jamie (FYB)</span>
                 </div>
                 <div class="col-6 col-md-3">
-                    <small class="text-uppercase text-secondary d-block mb-1 fw-bold" style="font-size: 0.7rem;">Scope
+                    <small class="text-uppercase d-block mb-1 fw-bold text-white" style="font-size: 0.7rem;">Scope
                         of Work</small>
-                    <span class="fw-semibold">UI/UX Design</span> <br>
-                    <span class="fw-semibold">Shopify Development</span> <br>
-                    <span class="fw-semibold">Subscription Flow</span>
+                    <span class="fw-semibold text-white">UI/UX Design</span> <br>
+                    <span class="fw-semibold text-white">Shopify Development</span> <br>
+                    <span class="fw-semibold text-white">Subscription Flow</span>
                 </div>
                 <div class="col-6 col-md-3">
-                    <small class="text-uppercase text-secondary d-block mb-1 fw-bold"
+                    <small class="text-uppercase d-block mb-1 fw-bold text-white"
                         style="font-size: 0.7rem;">Duration</small>
-                    <span class="fw-semibold">Jan - Sept 2025</span>
+                    <span class="fw-semibold text-white">Jan - Sept 2025</span>
                 </div>
                 <div class="col-6 col-md-3">
-                    <small class="text-uppercase text-secondary d-block mb-1 fw-bold" style="font-size: 0.7rem;">Key
+                    <small class="text-uppercase d-block mb-1 fw-bold text-white" style="font-size: 0.7rem;">Key
                         Result</small>
-                    <span class="fw-bold text-brand-green">+75% Sales Growth</span>
+                    <span class="fw-bold text-white">+75% Sales Growth</span>
                 </div>
             </div>
         </div>
@@ -395,13 +400,11 @@
 
     <!-- Mockup Section -->
     <div class="container-fluid p-0">
-        <div class="position-relative bg-secondary" style="height: 60vh; overflow: hidden;">
-            <img src="https://images.unsplash.com/photo-1543362906-ac1b4526c1d0?q=80&w=2070&auto=format&fit=crop"
-                alt="Healthy Food Prep" class="w-100 h-100 object-fit-cover"
-                style="opacity: 0.9; filter: brightness(0.8);">
-            <div class="position-absolute bottom-0 start-0 p-5 text-white">
+        <div class="position-relative bg-secondary">
+            <img src="assets/healthy.png" alt="Healthy Food Prep" class="w-100 h-100">
+            <!-- <div class="position-absolute bottom-0 start-0 p-5 text-white">
                 <span class="text-uppercase small letter-spacing-2 opacity-75 fw-bold">Post-Launch Visuals</span>
-            </div>
+            </div> -->
         </div>
     </div>
 
@@ -445,6 +448,8 @@
         </div>
     </section>
 
+
+
     <!-- Context -->
     <section class="section-padding bg-white">
         <div class="container-xxl">
@@ -463,6 +468,14 @@
                         abandonment. We needed to transform the experience from a basic cart to a lifestyle brand.
                     </p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="row">
+            <div class="col-12">
+                <img src="./assets/fyb-influencer.webp" class="img-fluid h-100 w-100" alt="">
             </div>
         </div>
     </section>
@@ -555,7 +568,7 @@
         <div class="container-xxl">
             <div class="mb-5">
                 <h2 class="display-5 fw-bold mb-3">Rethinking the Flow</h2>
-                <p class="text-secondary lead">We shifted from a transactional model to a plan-based model to reduce
+                <p class="text-white lead">We shifted from a transactional model to a plan-based model to reduce
                     cognitive load.</p>
             </div>
 
@@ -760,20 +773,16 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <!-- <footer class="section-padding text-center">
-        <div class="container">
-            <h2 class="display-5 font-serif mb-4">Ready to scale your brand?</h2>
-            <p class="text-secondary mb-5 col-md-6 mx-auto">
-                We build digital experiences that turn visitors into loyal subscribers.
-            </p>
-            <a href="#" class="btn btn-brand-white">View More Case Studies</a>
 
-            <div class="mt-5 pt-5 border-top border-secondary border-opacity-25 text-secondary small">
-                &copy; 2025 The Night Marketer. All rights reserved.
+
+
+    <section class="section-padding container">
+        <div class="row">
+            <div class="col-12">
+                <img src="./assets/fyb-bottom.webp" class="img-fluid h-100 w-100" alt="">
             </div>
         </div>
-    </footer> -->
+    </section>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
